@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+.navbar {
+  background-color: #FFFFFF;
+  font-family: "Rubik", sans-serif;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.nav {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  position: relative;
+}
+
+.nav-stickylogo {
+  width: 37px;
+  display: none;
+}
+
+.nav-stickylogo.active {
+  display: block;
+  padding: 10px 10px 20px 0;
+}
+
+.navbar-left {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.navbar-left .navbar-lits {
+  width: 100%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar-left .navbar-lits .nav-item {
+  padding: 20px;
+  font-size: 17px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.navbar-left .navbar-lits .nav-item:hover {
+  color: #FF6900;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar-left .navbar-lits .nav-item input {
+  width: 150px;
+  height: 20px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  background-color: #FF6900;
+}
+
+.navbar-left .navbar-lits .nav-item input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.navbar-left .navbar-lits .nav-item input:-ms-input-placeholder {
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.navbar-left .navbar-lits .nav-item input::-ms-input-placeholder {
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.navbar-left .navbar-lits .nav-item input::placeholder {
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.navbar-left .nav-btn {
+  display: none;
+}
+
+.navbar-right {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-right button {
+  width: 115px;
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  color: #FFFFFF;
+  cursor: pointer;
+  height: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: none;
+  border: none;
+  background-color: #FF6900;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar-right button .vert-line {
+  font-weight: normal;
+}
+/*# sourceMappingURL=Navbar.css.map */

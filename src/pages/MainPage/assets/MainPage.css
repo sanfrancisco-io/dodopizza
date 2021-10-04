@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+.main-title {
+  font-size: 30px;
+  font-weight: normal;
+  margin: 10px 0px 30px 30px;
+  font-family: "Rubik", sans-serif;
+}
+
+.card_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.card_main h3 {
+  display: block;
+}
+
+.maininfo-content {
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
+}
+
+.maininfo-content img {
+  padding: 0 10px 0 0;
+}
+
+.maininfo-content span {
+  color: #5c6370;
+}
+/*# sourceMappingURL=MainPage.css.map */

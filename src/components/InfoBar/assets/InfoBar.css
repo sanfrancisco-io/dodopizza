@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+.info-bar {
+  font-family: "Rubik", sans-serif;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.info-bar img {
+  width: 15px;
+}
+
+.info-bar .nav-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 50%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.info-bar .nav-left:first-child {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.info-bar .nav-left .item-about-rating .header-logo p {
+  font-size: 20px;
+}
+
+.info-bar .nav-left .nav-logo {
+  width: 150px;
+  padding: 0 0 0 15px;
+}
+
+.info-bar .nav-left .item-phone {
+  font-size: 17px;
+}
+
+.info-bar .nav-left .item-phone .item-child {
+  color: #999999;
+}
+
+.info-bar .nav-left .item-phone .megacom {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.info-bar .nav-right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-bar .nav-right .admin-button {
+  margin: 0 10px 0 0;
+}
+
+.info-bar .nav-right button {
+  width: 80px;
+  height: 30px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  font-family: "Rubik", sans-serif;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.info-bar .nav-right button:hover {
+  color: #FF6900;
+}
+/*# sourceMappingURL=InfoBar.css.map */

@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+.bonus-section {
+  width: 100%;
+}
+
+.bonus-section .main-text {
+  font-size: 35px;
+  font-weight: normal;
+  margin: 30px 0 25px 0;
+}
+
+.bonus-section .bonus-content .bonus-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=BonusPage.css.map */

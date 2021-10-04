@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,uFAAI;ADAZ,AAAA,gBAAgB,CAAA;EACZ,KAAK,EAAE,GAAG;CAIb;;AALD,AAEI,gBAFY,CAEZ,SAAS,CAAA;EACL,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "OutPizzasTable.scss",
+        "../../../variables/Variables.scss"
+    ],
+    "names": [],
+    "file": "OutPizzasTable.css"
+}

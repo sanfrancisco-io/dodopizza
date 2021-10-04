@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,uFAAI;ADAZ,AAAA,WAAW,CAAA;EACP,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "EditDodoPizza.scss",
+        "../../../variables/Variables.scss"
+    ],
+    "names": [],
+    "file": "EditDodoPizza.css"
+}

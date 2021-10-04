@@ -1,0 +1,62 @@
+@import '../../../variables/Variables.scss';
+.info-bar{
+    font-family: $rubikFont;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+        img{
+            width: 15px;
+        }
+    .nav-left{
+        display: flex;
+        justify-content: space-evenly;
+        
+        width: 50%;
+        align-items:flex-end;
+        &:first-child{
+            justify-content: space-around;
+        }
+        .item-about-rating{
+            .header-logo{
+                p{
+                    font-size: 20px;
+                }
+            }
+        }
+        .nav-logo{
+            width: 150px;
+            padding: 0 0 0 15px;
+        }
+        .item-phone{
+            font-size: 17px;
+            .item-child{
+ color: rgb(153, 153, 153);
+            }
+            .megacom{
+                padding: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .nav-right{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items:center;
+        .admin-button{
+            margin: 0 10px 0 0;
+        }
+        button{
+            width: 80px;
+            height: 30px;
+            border-radius: 15px;
+            outline: none;
+            border: none;
+            font-family: $rubikFont;
+            transition: 0.5s;
+            &:hover{
+                color: $orangeColor;
+            }
+        }
+    }
+}

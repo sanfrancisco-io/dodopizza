@@ -1,0 +1,25 @@
+@import '../components/AddPizza/assets/AddDodoPizza.css';
+@import '../components/AddSnacks/assets/AddSnacks.css';
+@import '../components/AddOtherGoods/assets/AddOtherGoods.css';
+@import '../components/AddDesserts/assets/AddDesserts.css';
+@import '../components/AddCombo/assets/AddCombo.css';
+@import '../components/AddBeverages/assets/AddBeverages.css';
+@import '../variables/Variables.scss';
+@import '../components/EditPizza/assets/EditDodoPizza.css';
+@import '../components/OutPizzasTable/assets/OutPizzasTable.css';
+@import '../components/InfoBar/assets/InfoBar.css';
+@import '../components/Navbar/assets/Navbar.css';
+@import '../components/Card/assets/Card.css';
+@import '../pages/MainPage/assets/MainPage.css';
+@import '../pages/AdminSection/assets/AdminSection.css';
+@import '../pages/BonusPage/assets/BonusPage.css';
+
+* {
+    padding:0;
+    margin: 0;
+    font-family: $rubikFont;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+}

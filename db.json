@@ -1,0 +1,231 @@
+{
+  "pizza": [
+    {
+      "title": "Пицца",
+      "price": 2000,
+      "description": "Пицца",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/0197c7cb-7f34-45a3-97ba-062153bbc9df.jpg",
+      "id": 1
+    },
+    {
+      "title": "Пицца",
+      "price": 2000,
+      "description": "Пицца",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/0197c7cb-7f34-45a3-97ba-062153bbc9df.jpg",
+      "id": 2
+    },
+    {
+      "title": "Пицца",
+      "price": 2000,
+      "description": "Пицца",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/0197c7cb-7f34-45a3-97ba-062153bbc9df.jpg",
+      "id": 3
+    },
+    {
+      "title": "Пицца",
+      "price": 2000,
+      "description": "Пицца",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/0197c7cb-7f34-45a3-97ba-062153bbc9df.jpg",
+      "id": 4
+    },
+    {
+      "title": "Пицца",
+      "price": 2000,
+      "description": "Пицца",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/0197c7cb-7f34-45a3-97ba-062153bbc9df.jpg",
+      "id": 5
+    },
+    {
+      "title": "Пицца",
+      "price": 2000,
+      "description": "Пицца",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/0197c7cb-7f34-45a3-97ba-062153bbc9df.jpg",
+      "id": 6
+    }
+  ],
+  "combo": [
+    {
+      "title": "Комбо",
+      "price": 2000,
+      "description": "Комбо",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/83b266e8dad840038f970939d84ec3ea_292x292.webp",
+      "id": 1
+    },
+    {
+      "title": "Комбо",
+      "price": 2000,
+      "description": "Комбо",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/83b266e8dad840038f970939d84ec3ea_292x292.webp",
+      "id": 2
+    },
+    {
+      "title": "Комбо",
+      "price": 2000,
+      "description": "Комбо",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/83b266e8dad840038f970939d84ec3ea_292x292.webp",
+      "id": 3
+    },
+    {
+      "title": "Комбо",
+      "price": 2000,
+      "description": "Комбо",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/83b266e8dad840038f970939d84ec3ea_292x292.webp",
+      "id": 4
+    },
+    {
+      "title": "Комбо",
+      "price": 2000,
+      "description": "Комбо",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/83b266e8dad840038f970939d84ec3ea_292x292.webp",
+      "id": 5
+    }
+  ],
+  "snacks": [
+    {
+      "title": "Закуски",
+      "price": 2000,
+      "description": "Закуски",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/c7438015dcc24d599daa02db7ff79be6_292x292.jpeg",
+      "id": 1
+    },
+    {
+      "title": "Закуски",
+      "price": 2000,
+      "description": "Закуски",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/c7438015dcc24d599daa02db7ff79be6_292x292.jpeg",
+      "id": 2
+    },
+    {
+      "title": "Закуски",
+      "price": 2000,
+      "description": "Закуски",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/c7438015dcc24d599daa02db7ff79be6_292x292.jpeg",
+      "id": 3
+    },
+    {
+      "title": "Закуски",
+      "price": 2000,
+      "description": "Закуски",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/c7438015dcc24d599daa02db7ff79be6_292x292.jpeg",
+      "id": 4
+    },
+    {
+      "title": "Закуски",
+      "price": 2000,
+      "description": "Закуски",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/c7438015dcc24d599daa02db7ff79be6_292x292.jpeg",
+      "id": 5
+    }
+  ],
+  "desserts": [
+    {
+      "title": "Десерты",
+      "price": 2000,
+      "description": "Десерты",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/0359c848cd9044af9534e75b26cc88fe_292x292.jpeg",
+      "id": 1
+    },
+    {
+      "title": "Десерты",
+      "price": 2000,
+      "description": "Десерты",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/0359c848cd9044af9534e75b26cc88fe_292x292.jpeg",
+      "id": 2
+    },
+    {
+      "title": "Десерты",
+      "price": 2000,
+      "description": "Десерты",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/0359c848cd9044af9534e75b26cc88fe_292x292.jpeg",
+      "id": 3
+    },
+    {
+      "title": "Десерты",
+      "price": 2000,
+      "description": "Десерты",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/0359c848cd9044af9534e75b26cc88fe_292x292.jpeg",
+      "id": 4
+    },
+    {
+      "title": "Десерты",
+      "price": 2000,
+      "description": "Десерты",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/0359c848cd9044af9534e75b26cc88fe_292x292.jpeg",
+      "id": 5
+    }
+  ],
+  "beverages": [
+    {
+      "title": "Напитки",
+      "price": 2000,
+      "description": "напитки",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/55ebd9a6394f4976a4e3b8f4294b1795_292x292.jpeg",
+      "id": 1
+    },
+    {
+      "title": "Напитки",
+      "price": 2000,
+      "description": "напитки",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/55ebd9a6394f4976a4e3b8f4294b1795_292x292.jpeg",
+      "id": 2
+    },
+    {
+      "title": "напитки",
+      "price": 123,
+      "description": "напитки",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/18287735ed79407b8afdef5b282fe964_292x292.jpeg",
+      "id": 3
+    },
+    {
+      "title": "напитки",
+      "price": 123,
+      "description": "напитки",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/18287735ed79407b8afdef5b282fe964_292x292.jpeg",
+      "id": 4
+    },
+    {
+      "title": "напитки",
+      "price": 123,
+      "description": "напитки",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/18287735ed79407b8afdef5b282fe964_292x292.jpeg",
+      "id": 5
+    }
+  ],
+  "othergoods": [
+    {
+      "title": "Другие товары",
+      "price": 212,
+      "description": "Другие товары",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/6e030599a999452497b87ffaeba43460_292x292.jpeg",
+      "id": 1
+    },
+    {
+      "title": "Другие товары",
+      "price": 212,
+      "description": "Другие товары",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/6e030599a999452497b87ffaeba43460_292x292.jpeg",
+      "id": 2
+    },
+    {
+      "title": "Другие товары",
+      "price": 212,
+      "description": "Другие товары",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/6e030599a999452497b87ffaeba43460_292x292.jpeg",
+      "id": 3
+    },
+    {
+      "title": "Другие товары",
+      "price": 212,
+      "description": "Другие товары",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/6e030599a999452497b87ffaeba43460_292x292.jpeg",
+      "id": 4
+    },
+    {
+      "title": "Другие товары",
+      "price": 212,
+      "description": "Другие товары",
+      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/6e030599a999452497b87ffaeba43460_292x292.jpeg",
+      "id": 5
+    }
+  ]
+}

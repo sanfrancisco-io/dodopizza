@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,uFAAI;ADAZ,AAAA,aAAa,CAAA;EACT,WAAW,ECEH,OAAO,EAAE,UAAU;EDD5B,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,MAAM;CASpB;;AAbD,AAKG,aALU,CAKV,CAAC,CAAA;EACG,eAAe,EAAE,IAAI;EACrB,MAAM,EAAE,IAAI;CACf;;AARJ,AASG,aATU,CASV,UAAU,CAAA;EACN,WAAW,EAAE,MAAM;EACnB,OAAO,EAAE,aAAa;CACzB",
+    "sources": [
+        "AdminSection.scss",
+        "../../../variables/Variables.scss"
+    ],
+    "names": [],
+    "file": "AdminSection.css"
+}

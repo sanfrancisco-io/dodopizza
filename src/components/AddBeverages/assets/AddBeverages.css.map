@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,uFAAI",
+    "sources": [
+        "AddBeverages.scss",
+        "../../../variables/Variables.scss"
+    ],
+    "names": [],
+    "file": "AddBeverages.css"
+}

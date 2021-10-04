@@ -1,0 +1,22 @@
+@import '../../../variables/Variables.scss';
+.bonus-section{
+    width: 100%;
+    .main-text{
+        font-size: 35px;
+        font-weight: normal;
+        margin: 30px 0 25px 0;
+    }
+    .bonus-content{
+        .bonus-main{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+
+// card 
+

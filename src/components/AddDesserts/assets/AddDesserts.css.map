@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,uFAAI",
+    "sources": [
+        "AddDesserts.scss",
+        "../../../variables/Variables.scss"
+    ],
+    "names": [],
+    "file": "AddDesserts.css"
+}

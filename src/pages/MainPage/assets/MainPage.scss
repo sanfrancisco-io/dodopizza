@@ -1,0 +1,29 @@
+@import '../../../variables/Variables.scss';
+.main-title{
+    font-size: 30px;
+    font-weight: normal;
+    margin: 10px 0px 30px 30px;
+    font-family: $rubikFont;
+}
+.card_main{
+    display: flex; 
+    flex-wrap: wrap;
+    width:100%;
+    h3{
+        display: block;
+    }
+}
+.maininfo-content{
+    font-size: 16px;
+    font-family: $rubikFont;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 20px;
+    img{
+        padding: 0 10px 0 0;
+    }
+    span{
+        color: rgb(92, 99, 112);
+    }
+}
