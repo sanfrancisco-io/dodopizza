@@ -51,7 +51,7 @@ const OutCombo = () => {
                                             </Button>
                                             </TableCell>
                                             <TableCell align="left" >
-                                                <Link to={`/edit/${item.id}`}>
+                                                <Link to={`/edit/combo/${item.id}`}>
                                                     <Button align="left" variant="contained" color="primary">
                                                         Редактирование
                                                     </Button>

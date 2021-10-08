@@ -1,7 +1,6 @@
 import { Container } from '@material-ui/core';
 import React from 'react';
 import Infobar from '../../components/InfoBar/Infobar';
-import Navbar from '../../components/Navbar/Navbar';
 import CardBonusContent from './CardBonusContent';
 import CardEightContent from './CardEightContent';
 import CardFiveConten from './CardFiveContent';
@@ -17,7 +16,6 @@ const BonusPage = () => {
         <div>
             <Container>
                 <Infobar />
-                <Navbar />
                 <div className='bonus-section'>
                     <h2 className='main-text'>Акции</h2>
                     <div className='bonus-content'>

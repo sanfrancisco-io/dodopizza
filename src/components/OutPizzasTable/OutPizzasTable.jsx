@@ -51,7 +51,7 @@ const OutPizzasTable = () => {
                                             </Button>
                                             </TableCell>
                                             <TableCell align="left" >
-                                                <Link to={`/edit/${item.id}`}>
+                                                <Link to={`/edit/pizza/${item.id}`}>
                                                     <Button align="left" variant="contained" color="primary">
                                                         Редактирование
                                                     </Button>

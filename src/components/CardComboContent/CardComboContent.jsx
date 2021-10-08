@@ -5,9 +5,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 const CardComboContent = () => {
     const { getCombos, combos, currentPosts } = useContext(clientContext)
-    console.log(currentPosts);
-    // console.log(combos);
-    console.log(combos);
     useEffect(() => {
         getCombos()
     }, [])

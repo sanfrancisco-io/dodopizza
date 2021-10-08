@@ -1,0 +1,157 @@
+@import '../../../variables/Variables.scss';
+header{
+    width: 70% !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    border-radius: 10px;
+    background-color: rgb(233, 105, 0) !important;
+}
+.first-news-section{
+        .title-section{
+            h2{
+            text-align: center;
+            font-weight: normal;
+            padding: 20px;
+            }
+        }
+        .content-section{
+            width: 80%;
+            font-size: 18px;
+            line-height: 30px;
+            img{
+                width: 760px;
+                margin-top: 50px;
+            }
+            @media all and (max-width: 700px) {
+                img{
+                    width: 300px;
+                }
+                    .content-section{
+                    width: 100%;
+                    font-size: 16px;
+                    line-height: 25px;
+                    }   
+            }
+        }
+    }
+    .second-news-section{
+        .title-section{
+            h2{
+            text-align: center;
+            font-weight: normal;
+            padding: 30px;
+            }
+        }
+        .content-section{
+            width: 80%;
+            font-size: 18px;
+            line-height: 30px;
+            img{
+                width: 760px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            @media all and (max-width: 700px) {
+                img{
+                    width: 300px;
+                }
+                .content-section{
+                width: 100%;
+                font-size: 16px;
+                line-height: 25px;
+                }  
+            }
+            .content-item-text{
+                display: flex;
+            }
+        }
+    }
+    .third-news-section{
+        .title-section{
+            h2{
+            text-align: center;
+            font-weight: normal;
+            padding: 30px;
+            }
+        }
+        .content-section{
+            width: 80%;
+            .content-item-one{
+                font-size: 18px;
+                line-height: 30px;
+            }
+            .content-item-two{
+               font-size: 18px;
+                line-height: 30px;
+                display: flex; 
+                margin-top: 30px;
+            }
+            img{
+                width: 760px;
+                margin-top: 50px;
+                margin-bottom: 50px; 
+            }
+            @media all and (max-width: 700px) {
+                img{
+                    width: 300px;
+                }
+                .content-section{
+                width: 100%;
+                 .content-item-one{
+                      font-size: 16px;
+                    line-height: 25px;
+                 }
+                 .content-item-two{
+                     font-size: 16px;
+                    line-height: 25px;
+                 }
+                 img{
+                     width: 300px;
+                 }
+                }  
+            }
+            .content-item-third{
+                font-size: 18px;
+                line-height: 30px;
+                display: flex; 
+                margin-top: 30px;
+            }
+        }
+    }
+    .four-news-section{
+        .title-section{
+            h2{
+            text-align: center;
+            font-weight: normal;
+            padding: 50px;
+            }
+        }
+        .content-section{
+            width: 80%;
+            .content-item-one{
+                font-size: 18px;
+                line-height: 30px;
+                margin-top: 30px;
+            }
+            img{
+                width: 760px;
+            }
+            @media all and (max-width: 700px) {
+                img{
+                    width: 300px;
+                }
+            }
+            .content-item-two{
+                font-size: 18px;
+                line-height: 30px;
+                display: flex; 
+                margin-top: 30px;
+            }
+            .content-item-three{
+                font-size: 18px;
+                line-height: 30px;
+                display: flex; 
+                margin-top: 30px;
+            }
+        }
+    }

@@ -168,7 +168,7 @@ const AdminContextProvider = ({ children }) => {
         })
     }
     const getSnacksToEdit = async (id) => {
-        const { data } = await axios(`${COMBO_API}/${id}`)
+        const { data } = await axios(`${SNACKS_API}/${id}`)
         dispatch({
             type: 'GET_SNACKS_TO_EDIT',
             payload: data

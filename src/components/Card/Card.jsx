@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -8,6 +8,9 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { clientContext } from '../../contexts/ClientContext';
 import '../../variables/Variables.css'
+import BasicModal from '../CardModal/CardModal';
+import { CardActions } from '@material-ui/core';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 
 const useStyles = makeStyles({
     root: {
@@ -15,7 +18,7 @@ const useStyles = makeStyles({
         margin: '0 10px 10px 10px',
         width: 280,
         minWidth: 240,
-        height: 550,
+        minHeight: 600,
         fontFamily: `'Rubik'`,
         border: "none",
         boxShadow: "none",
@@ -64,39 +67,42 @@ const useStyles = makeStyles({
     },
     titleStyles: {
         fontSize: '23px'
+    },
+    actionStyles: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        width: '100%',
     }
 });
 
 export default function MediaCard({ item }) {
+    const { addAndDeletePizzaInFavorite } = useContext(clientContext)
     const classes = useStyles();
-    const { addAndDeletePizzaInCart } = useContext(clientContext)
     return (
         <div className='maincontentcard'>
-            <Card className={classes.root} >
-                <CardActionArea>
-                    <CardMedia
-                        className={classes.media}
-                        image={item.photo}
-                    />
-                    <CardContent>
-                        <Typography variant="h6" className={classes.titleStyles} component="h2">
-                            {item.title}
-                        </Typography>
-                        <Typography className={classes.textContent} variant="body2" component="p">
-                            {item.description}
-                        </Typography>
-                        <Typography className={classes.cardDisplay} variant="h6">
-                            От {item.price} сом
-                            <button
-                                className={classes.buttonStyles}
-                                onClick={() => addAndDeletePizzaInCart(item)}
-                                size="small"
-                                color="primary">
-                                Выбрать
-                            </button>
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
+            <Card key={item.id} className={classes.root} >
+                <CardMedia
+                    className={classes.media}
+                    image={item.photo}
+                />
+                <CardContent >
+                    <Typography variant="h6" className={classes.titleStyles} component="h2">
+                        {item.title}
+                    </Typography>
+                    <Typography className={classes.textContent} variant="body2" component="p">
+                        {item.description}
+                    </Typography>
+                    <Typography className={classes.cardDisplay} variant="h6">
+                        От {item.price} сом
+                        <BasicModal item={item} />
+                    </Typography>
+                </CardContent>
+                <div>
+                    <CardActions>
+                        <Button onClick={() => addAndDeletePizzaInFavorite(item)} className={classes.actionStyles} size="small"><FavoriteIcon /></Button>
+                        <Button className={classes.actionStyles} size="small">comments</Button>
+                    </CardActions>
+                </div>
             </Card>
         </div>
     );

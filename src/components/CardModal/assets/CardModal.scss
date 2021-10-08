@@ -1,0 +1,66 @@
+@import '../../../variables/Variables.scss';
+.modal{
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+    .modal-left{
+        img{
+            height: auto;
+            margin: 20% auto;
+        }
+    }
+    .modal-right{
+       display: flex; 
+       flex-wrap: wrap; 
+       align-items: center; 
+       align-content: space-around;
+       .title-modal{
+           font-size: 20px;
+       }
+       .descr-modal{
+           font-size: 15px;
+           font-weight: 300;
+       }
+       .button-section{
+           width: 100%;
+           display: flex;
+           justify-content: space-evenly;
+           .button-products{
+               width: 100px;
+               height: 150px;
+               border: none;
+               outline: none;
+               background-color: #fff;
+               border-radius: 10px;
+               box-shadow: 0 0 10px rgb(173, 173, 173);
+               &:active{
+                border: 1px solid orange;
+               }
+               img{
+                width: 80px;
+                  }
+           }
+       }
+       .cart-section{
+           width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        .cart-button{
+            outline: none;
+            border: none;
+            background-color: $orangeColor;
+            width: 100%;
+            padding: 20px;
+            border-radius: 25px;
+            margin: 20px;
+            color: $whiteColor;
+            font-size: 17px;
+            &:active{
+                color: #000;
+                transition: .3s;
+                background-color: rgb(70, 54, 25);
+            }
+        }
+       }
+    }
+}

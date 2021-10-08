@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+.header-cart h2 {
+  text-align: center;
+}
+
+.header-cart button {
+  outline: none;
+  border: none;
+  background-color: #FF6900;
+  width: 130px;
+  cursor: pointer;
+  color: #fff;
+  height: 25px;
+  border-radius: 15px;
+}
+
+.header-cart button:active {
+  color: #000;
+  -webkit-transition: .1;
+  transition: .1;
+}
+
+.table-section {
+  width: 70%;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 15px #6b7270;
+          box-shadow: 0 0 15px #6b7270;
+  border-radius: 15px;
+}
+/*# sourceMappingURL=CartTable.css.map */

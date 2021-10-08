@@ -8,6 +8,8 @@ import Infobar from '../../components/InfoBar/Infobar';
 import Navbar from '../../components/Navbar/Navbar';
 import CardBeverageContent from '../../components/CardBeverageContent/CardBeverageContent';
 import CardOthergoodComp from '../../components/CardOtherGoodComp.jsx/CardOthergoodComp';
+import SimpleTabs from '../../components/Labtabs/Labtabs';
+import SearchInput from '../../components/SearchInput/SearchInput';
 
 
 const MainPage = () => {
@@ -17,11 +19,16 @@ const MainPage = () => {
                 <Infobar />
                 <Navbar />
                 <div className='maininfo-content' id='mainInfo'>
-                    <img src="https://dodopizza-a.akamaihd.net/site-static/dist/f30f1ab8cd7a7a54476d.svg" alt="infoaboutfood" />
-                    <p>
-                        Без свинины <br />
-                        <span>Мы готовим из цыпленка и говядины</span>
-                    </p>
+                    <div className='item-info-content'>
+                        <SearchInput />
+                    </div>
+                    <div className='item-info-secondcont'>
+                        <img src="https://dodopizza-a.akamaihd.net/site-static/dist/f30f1ab8cd7a7a54476d.svg" alt="infoaboutfood" />
+                        <p>
+                            Без свинины <br />
+                            <span>Мы готовим из цыпленка и говядины</span>
+                        </p>
+                    </div>
                 </div>
                 <h3 className='main-title' id='pizza'>Пицца</h3>
                 <div className='card_main'>
@@ -47,6 +54,8 @@ const MainPage = () => {
                 <div className='card_main'>
                     <CardOthergoodComp />
                 </div>
+                <h3 className='main-title' id='news'>Новости</h3>
+                <SimpleTabs />
             </Container>
         </div>
     );

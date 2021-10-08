@@ -1,7 +1,8 @@
 @import '../../../variables/Variables.scss';
 
 .navbar{
-    background-color: $whiteColor;
+    // background-color: $whiteColor;
+    backdrop-filter: blur(5px);
     font-family: $rubikFont;
     position: sticky;
     top: 0;
@@ -26,11 +27,15 @@
     align-items: center;
     cursor: pointer;
     flex-direction: row;
+    @media all and (max-width:992px) {
+        display: none;
+    }
     .navbar-lits{
         width: 100%;
         list-style-type: none;
         display: flex;
         flex-direction: row;  
+        align-items: center;
         justify-content: space-between;  
         .nav-item{
             padding: 20px;
@@ -56,15 +61,31 @@
             }
         }
     }
-    .nav-btn{
-        display: none;
-    }
 }
+.nav-btn{
+        display: none;
+        button{
+            cursor: pointer;
+            img{
+                width: 30px;
+                background-color: $orangeColor;
+                box-shadow: 0 0 10px rgb(163, 163, 163);
+            }
+        }
+        @media all and (max-width: 500px){
+            display: block;
+        }
+    }
 .navbar-right{
     width: 20%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    @media all and (max-width: 992px) {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
     button{
         width: 115px;
         padding: 10px;
@@ -83,5 +104,17 @@
         .vert-line{
             font-weight: normal;
         }
+    }
+}
+.mobile-item{
+   display: flex;
+}
+.cancel-block{
+    text-align: end;
+    padding-top: 15px;
+    span{
+        color: $orangeColor;
+        cursor: pointer;
+        font-size: 42px;
     }
 }

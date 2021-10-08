@@ -5,7 +5,6 @@ import MediaCard from '../Card/Card';
 
 const CardPizzaContent = () => {
     const { getPizzas, pizzas, currentPosts } = useContext(clientContext)
-    // console.log(currentPosts);
     useEffect(() => {
         getPizzas()
     }, [])
@@ -14,7 +13,7 @@ const CardPizzaContent = () => {
             {pizzas ? (
                 <>
                     {
-                        currentPosts.map(item => (
+                        pizzas.map(item => (
                             <MediaCard item={item} key={item.id} />
                         ))
                     }

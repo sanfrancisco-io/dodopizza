@@ -69,10 +69,10 @@ const useStyles = makeStyles({
 
 export default function CardCombo({ item }) {
     const classes = useStyles();
-    const { addAndDeletePizzaInCart } = useContext(clientContext)
+    const { addAndDeleteComboInCart } = useContext(clientContext)
     return (
         <div className='maincontentcard'>
-            <Card className={classes.root} >
+            <Card key={item.id + 5} className={classes.root} >
                 <CardActionArea>
                     <CardMedia
                         className={classes.media}
@@ -89,7 +89,7 @@ export default function CardCombo({ item }) {
                             От {item.price} сом
                             <button
                                 className={classes.buttonStyles}
-                                onClick={() => addAndDeletePizzaInCart(item)}
+                                onClick={() => addAndDeleteComboInCart(item)}
                                 size="small"
                                 color="primary">
                                 Выбрать

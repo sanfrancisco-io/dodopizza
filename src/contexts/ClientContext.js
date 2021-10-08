@@ -13,11 +13,20 @@ const INIT_STATE = {
     desserts: null,
     beverages: null,
     othergood: null,
+    favorite: null,
     pizzasCountInCart: JSON.parse(localStorage.getItem('cart'))
         ?
         JSON.parse(localStorage.getItem('cart')).pizzas.length
         : 0,
-    cart: null
+    combosCountInCart: JSON.parse(localStorage.getItem('combo'))
+        ?
+        JSON.parse(localStorage.getItem('combo')).combos.length
+        : 0,
+    pizzasCountInFavorite: JSON.parse(localStorage.getItem('favorite'))
+        ?
+        JSON.parse(localStorage.getItem('favorite')).pizzas.length
+        : 0,
+    cart: null,
 }
 
 const reducer = (state = INIT_STATE, action) => {
@@ -26,6 +35,10 @@ const reducer = (state = INIT_STATE, action) => {
             return { ...state, pizzas: action.payload }
         case 'ADD_AND_DELETE_PIZZA_CART':
             return { ...state, pizzasCountInCart: action.payload }
+        case 'ADD_AND_DELETE_COMBO_CART':
+            return { ...state, combosCountInCart: action.payload }
+        case 'ADD_AND_DELETE_PIZZA_FAVORITE':
+            return { ...state, pizzasCountInFavorite: action.payload }
         case 'GET_CART':
             return { ...state, cart: action.payload }
         case 'GET_COMBOS':
@@ -38,6 +51,8 @@ const reducer = (state = INIT_STATE, action) => {
             return { ...state, beverages: action.payload }
         case 'GET_OTHERGOOD':
             return { ...state, othergood: action.payload }
+        case "GET_FAVORITES":
+            return { ...state, favorite: action.payload }
         default:
             return { ...state }
     }
@@ -89,7 +104,7 @@ const ClientContextProvider = ({ children }) => {
             payload: data
         })
     }
-    const addAndDeletePizzaInCart = (pizza) => {
+    const addAndDeletePizzaInCart = (pizza, price) => {
         let cart = JSON.parse(localStorage.getItem('cart'))
         if (!cart) {
             cart = {
@@ -100,9 +115,11 @@ const ClientContextProvider = ({ children }) => {
         let newPizza = {
             pizza: pizza,
             count: 1,
-            subPrice: 0
+            subPrice: 0,
+            alteredSubPrice: price
         }
         newPizza.subPrice = calcSubPrice(newPizza)
+        newPizza.alteredSubPrice = calcSubPrice(newPizza)
         let newCart = cart.pizzas.filter(
             item => item.pizza.id === pizza.id)
         if (newCart.length) {
@@ -118,6 +135,69 @@ const ClientContextProvider = ({ children }) => {
             payload: cart.pizzas.length
         })
     }
+    const addAndDeleteComboInCart = (combo) => {
+        let cartCombo = JSON.parse(localStorage.getItem('cartCombo'))
+        if (!cartCombo) {
+            cartCombo = {
+                combos: [],
+                totalPrice: 0
+            }
+        }
+        let newCombo = {
+            combo: combo,
+            count: 1,
+            subPrice: 0,
+        }
+        newCombo.subPrice = calcSubPrice(newCombo)
+        let newCart = cartCombo.combos.filter(
+            item => item.combo.id === combo.id)
+        if (newCart.length) {
+            cartCombo.combos = cartCombo.combos.filter(
+                item => item.combo.id !== combo.id)
+        } else {
+            cartCombo.combos.push(newCombo)
+        }
+        cartCombo.totalPrice = calcTotalPrice(cartCombo.combos)
+        localStorage.setItem('cartCombo', JSON.stringify(combo))
+        dispatch({
+            type: 'ADD_AND_DELETE_COMBO_CART',
+            payload: cartCombo.combos.length
+        })
+    }
+
+    const addAndDeletePizzaInFavorite = (pizza) => {
+        let favorite = JSON.parse(localStorage.getItem('favorite'))
+        if (!favorite) {
+            favorite = {
+                pizzas: [],
+            }
+        }
+        let newPizza = {
+            pizza: pizza,
+        }
+        let newFavorite = favorite.pizzas.filter(item => item.pizza.id === pizza.id)
+        if (newFavorite.length) {
+            favorite.pizzas = favorite.pizzas.filter(item => item.pizza.id !== pizza.id)
+        } else {
+            favorite.pizzas.push(newPizza)
+        }
+        localStorage.setItem('favorite', JSON.stringify(favorite))
+        dispatch({
+            type: 'ADD_AND_DELETE_PIZZA_FAVORITE',
+            payload: favorite.pizzas.length
+        })
+        console.log(favorite);
+    }
+
+    const checkPizzaInFavorite = (id) => {
+        let favorite = JSON.parse(localStorage.getItem('favorite'))
+        if (!favorite) {
+            return false
+        }
+        let newFavorite = favorite.pizzas.filter(item => item.pizza.id === id)
+        return newFavorite.length ? true : false
+    }
+
     const checkPizzaInCart = (id) => {
         let cart = JSON.parse(localStorage.getItem('cart'))
         if (!cart) {
@@ -126,12 +206,27 @@ const ClientContextProvider = ({ children }) => {
         let newCart = cart.pizzas.filter(item => item.pizza.id === id)
         return newCart.length ? true : false
     }
+    const checkCombonCart = (id) => {
+        let cartCombo = JSON.parse(localStorage.getItem('cartCombo'))
+        if (!cartCombo) {
+            return false
+        }
+        let newCombo = cartCombo.combos.filter(item => item.combo.id === id)
+        return newCombo.length ? true : false
+    }
 
     const getCart = () => {
         let cart = JSON.parse(localStorage.getItem('cart'))
         dispatch({
             type: 'GET_CART',
             payload: cart
+        })
+    }
+    const getFavorites = () => {
+        let favorite = JSON.parse(localStorage.getItem('favorite'))
+        dispatch({
+            type: 'GET_FAVORITES',
+            payload: favorite
         })
     }
 
@@ -144,6 +239,7 @@ const ClientContextProvider = ({ children }) => {
             if (item.pizza.id === id) {
                 item.count = count
                 item.subPrice = calcSubPrice(item)
+                item.alteredSubPrice = calcSubPrice(item)
             }
             return item
         })
@@ -151,11 +247,27 @@ const ClientContextProvider = ({ children }) => {
         localStorage.setItem('cart', JSON.stringify(cart))
         getCart()
     }
+    const changeCountCombos = (count, id) => {
+        let cartCombo = JSON.parse(localStorage.getItem('cart'))
+        if (!cartCombo) {
+            return
+        }
+        cartCombo.pizzas = cartCombo.pizzas.map(item => {
+            if (item.pizza.id === id) {
+                item.count = count
+                item.subPrice = calcSubPrice(item)
+            }
+            return item
+        })
+        cartCombo.totalPrice = calcTotalPrice(cartCombo.pizzas)
+        localStorage.setItem('cartCombo', JSON.stringify(cartCombo))
+        getCart()
+    }
 
     // pagination start 
     const [posts, setPosts] = useState([])
     const [currentPage, setCurrentPage] = useState(1)
-    const [postPerPage] = useState(6)
+    const [postPerPage] = useState(1)
 
     useEffect(() => {
         const fetchItems = () => {
@@ -183,9 +295,13 @@ const ClientContextProvider = ({ children }) => {
             getOthergood,
             getSnacks,
             addAndDeletePizzaInCart,
+            addAndDeleteComboInCart,
             checkPizzaInCart,
             getCart,
             changeCountPizzas,
+            getFavorites,
+            checkPizzaInFavorite,
+            addAndDeletePizzaInFavorite,
 
 
             pizzas: state.pizzas,
@@ -195,8 +311,10 @@ const ClientContextProvider = ({ children }) => {
             snacks: state.snacks,
             othergood: state.othergood,
             pizzasCountInCart: state.pizzasCountInCart,
+            combosCountInCart: state.combosCountInCart,
             cart: state.cart,
             currentPosts,
+            favorite: state.favorite,
         }}>
             {children}
         </clientContext.Provider>
@@ -204,3 +322,4 @@ const ClientContextProvider = ({ children }) => {
 };
 
 export default ClientContextProvider;
+

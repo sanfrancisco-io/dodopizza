@@ -18,7 +18,7 @@
     font-family: $rubikFont;
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 20px;
     img{
         padding: 0 10px 0 0;
@@ -26,4 +26,13 @@
     span{
         color: rgb(92, 99, 112);
     }
+    .item-info-secondcont{
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
+     @media all and (max-width:600px) {
+            display: flex;
+            flex-direction: column;
+        }
 }

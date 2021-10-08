@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
 .navbar {
-  background-color: #FFFFFF;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   font-family: "Rubik", sans-serif;
   position: -webkit-sticky;
   position: sticky;
@@ -39,6 +40,12 @@
           flex-direction: row;
 }
 
+@media all and (max-width: 992px) {
+  .navbar-left {
+    display: none;
+  }
+}
+
 .navbar-left .navbar-lits {
   width: 100%;
   list-style-type: none;
@@ -49,6 +56,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -104,8 +114,25 @@
   padding-left: 10px;
 }
 
-.navbar-left .nav-btn {
+.nav-btn {
   display: none;
+}
+
+.nav-btn button {
+  cursor: pointer;
+}
+
+.nav-btn button img {
+  width: 30px;
+  background-color: #FF6900;
+  -webkit-box-shadow: 0 0 10px #a3a3a3;
+          box-shadow: 0 0 10px #a3a3a3;
+}
+
+@media all and (max-width: 500px) {
+  .nav-btn {
+    display: block;
+  }
 }
 
 .navbar-right {
@@ -119,6 +146,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media all and (max-width: 992px) {
+  .navbar-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+  }
 }
 
 .navbar-right button {
@@ -146,5 +185,22 @@
 
 .navbar-right button .vert-line {
   font-weight: normal;
+}
+
+.mobile-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cancel-block {
+  text-align: end;
+  padding-top: 15px;
+}
+
+.cancel-block span {
+  color: #FF6900;
+  cursor: pointer;
+  font-size: 42px;
 }
 /*# sourceMappingURL=Navbar.css.map */

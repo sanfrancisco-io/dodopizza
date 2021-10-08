@@ -1,7 +1,70 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { useHistory } from 'react-router';
 import starIcon from '../../images/star.svg'
 import { Link } from 'react-router-dom';
+import { Avatar, IconButton, Menu, MenuItem } from '@material-ui/core';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import { signOut } from "firebase/auth";
+import { fire } from '../../firebase'
+import { authContext, useAuth } from '../../contexts/AuthContext';
+import { makeStyles } from '@material-ui/core/styles';
+import { deepOrange, deepPurple } from '@material-ui/core/colors';
+import { ADMIN } from '../../helpers/const';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+        '& > *': {
+            margin: theme.spacing(1),
+        },
+    },
+    orange: {
+        color: theme.palette.getContrastText(deepOrange[500]),
+        backgroundColor: deepOrange[500],
+    },
+    purple: {
+        color: theme.palette.getContrastText(deepPurple[500]),
+        backgroundColor: deepPurple[500],
+    },
+}));
 const Infobar = () => {
+    const { user } = useContext(authContext)
+    console.log(user);
+    const logout = () => signOut(fire);
+    console.log(logout);
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const isMenuOpen = Boolean(anchorEl);
+
+    const handleProfileMenuOpen = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleMenuClose = () => {
+        setAnchorEl(null);
+    };
+    const history = useHistory()
+    const menuId = 'primary-search-account-menu';
+    const classes = useStyles();
+    const renderMenu = (
+        <Menu
+            anchorEl={anchorEl}
+            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            id={menuId}
+            keepMounted
+            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+            open={isMenuOpen}
+            onClose={handleMenuClose}
+        >
+            {
+                user ? (<MenuItem onClick={logout}>Выйти</MenuItem>) : (
+                    <div>
+                        <MenuItem onClick={() => history.push('/login')}  >Войти</MenuItem>
+                        <MenuItem onClick={() => history.push('/signup')}>Регистрация</MenuItem>
+                    </div>
+                )
+            }
+        </Menu>
+    );
     return (
         <div className='container'>
             <div className='info-bar'>
@@ -30,14 +93,24 @@ const Infobar = () => {
                     </div>
                 </div>
                 <div className="nav-right">
-                    <Link to='/admin'>
-                        <button className='admin-button'>
-                            Админ
-                        </button>
-                    </Link>
-                    <button>
-                        Войти
-                    </button>
+                    {
+                        user ? user.email === ADMIN ? <Link to='/admin'><button className='admin-button'>Админ</button></Link> : null : null
+                    }
+                    <IconButton
+                        edge="end"
+                        aria-label="account of current user"
+                        aria-controls={menuId}
+                        aria-haspopup="true"
+                        onClick={handleProfileMenuOpen}
+                        color="inherit"
+                    >
+                        {
+                            user ? (
+                                <Avatar className={classes.orange}>Auth</Avatar>
+                            ) : (<AccountCircle />)
+                        }
+                    </IconButton>
+                    {renderMenu}
                 </div>
             </div>
         </div>

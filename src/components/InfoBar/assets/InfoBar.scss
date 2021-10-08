@@ -17,6 +17,9 @@
             justify-content: space-around;
         }
         .item-about-rating{
+            @media all and (max-width: 992px) {
+                display: none;
+            }
             .header-logo{
                 p{
                     font-size: 20px;
@@ -26,8 +29,14 @@
         .nav-logo{
             width: 150px;
             padding: 0 0 0 15px;
+            @media all and (max-width: 992px) {
+                width: 80px;
+            }
         }
         .item-phone{
+            @media all and (max-width: 992px) {
+                display: none;
+            }
             font-size: 17px;
             .item-child{
  color: rgb(153, 153, 153);

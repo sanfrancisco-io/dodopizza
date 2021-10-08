@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap");
+.modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 400px;
+}
+
+.modal .modal-left img {
+  height: auto;
+  margin: 20% auto;
+}
+
+.modal .modal-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.modal .modal-right .title-modal {
+  font-size: 20px;
+}
+
+.modal .modal-right .descr-modal {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.modal .modal-right .button-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.modal .modal-right .button-section .button-products {
+  width: 100px;
+  height: 150px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px #adadad;
+          box-shadow: 0 0 10px #adadad;
+}
+
+.modal .modal-right .button-section .button-products:active {
+  border: 1px solid orange;
+}
+
+.modal .modal-right .button-section .button-products img {
+  width: 80px;
+}
+
+.modal .modal-right .cart-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.modal .modal-right .cart-section .cart-button {
+  outline: none;
+  border: none;
+  background-color: #FF6900;
+  width: 100%;
+  padding: 20px;
+  border-radius: 25px;
+  margin: 20px;
+  color: #FFFFFF;
+  font-size: 17px;
+}
+
+.modal .modal-right .cart-section .cart-button:active {
+  color: #000;
+  -webkit-transition: .3s;
+  transition: .3s;
+  background-color: #463619;
+}
+/*# sourceMappingURL=CardModal.css.map */

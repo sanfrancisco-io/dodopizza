@@ -1,0 +1,12 @@
+@import '../../../variables/Variables.scss';
+.input{
+    outline: none;
+    background-color: $orangeColor;
+    border-radius: 15px;
+    height: 20px;
+    &::placeholder{
+        color: black;
+        font-size: 17px;
+        padding-left: 10px;
+    }
+}
