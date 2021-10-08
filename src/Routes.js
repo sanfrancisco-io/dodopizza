@@ -22,6 +22,7 @@ import AuthContextProvider from './contexts/AuthContext';
 import FavoritePage from './pages/FavoritePage/FavoritePage';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
+import OutTableComm from './components/OutTableComm/OutTableComm';
 
 
 
@@ -51,6 +52,7 @@ const Routes = () => {
                             <Route exact path='/favorite' component={FavoritePage} />
                             <Route exact path='/login' component={Login} />
                             <Route exact path='/signup' component={Signup} />
+                            <Route exact path='/comm' component={OutTableComm} />
                         </Switch>
                     </BrowserRouter>
                 </AdminContextProvider>

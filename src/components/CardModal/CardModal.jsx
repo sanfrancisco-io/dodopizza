@@ -3,9 +3,6 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import { clientContext } from '../../contexts/ClientContext';
-import { adminContext } from '../../contexts/AdminContext';
-import { calcAddProduct, calcSubPrice } from '../../helpers/calc';
-import { useHistory } from 'react-router';
 
 const style = {
     position: 'absolute',

@@ -1,22 +1,8 @@
 {
   "pizza": [
     {
-      "title": "Азиатская",
-      "price": 550,
-      "description": "Моцарелла, сладкий перец, томаты, красный лук, фарш из говядины, сушеный перец чили, томатный соус",
-      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/1ee83fd7a0444e7c90bf593fdea61801_292x292.jpeg",
-      "id": 1
-    },
-    {
-      "title": "Пицца от Кеши ",
-      "price": 330,
-      "description": "Моцарелла, сладкий перец, томаты, красный лук, фарш из говядины, сушеный перец чили, томатный соус",
-      "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/ef52870f43604fac87241f0e2640acc9_292x292.jpeg",
-      "id": 2
-    },
-    {
-      "title": "Пицца от Тучки ",
-      "price": 330,
+      "title": "Пицца от Джеки чан",
+      "price": 500,
       "description": "Моцарелла, сладкий перец, томаты, красный лук, фарш из говядины, сушеный перец чили, томатный соус",
       "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/1852911e760d4794bb7d8e3c79193b41_292x292.jpeg",
       "id": 3
@@ -372,6 +358,33 @@
       "price": 212,
       "description": "Другие товары",
       "photo": "https://dodopizza-a.akamaihd.net/static/Img/Products/6e030599a999452497b87ffaeba43460_292x292.jpeg",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "title": "хорошая пицца",
+      "user": "Илон Маск",
+      "id": 1
+    },
+    {
+      "title": "Плохая",
+      "user": "Пицца",
+      "id": 2
+    },
+    {
+      "title": "Норм",
+      "user": "Не норм",
+      "id": 3
+    },
+    {
+      "title": "123",
+      "user": "123",
+      "id": 4
+    },
+    {
+      "title": "123",
+      "user": "123",
       "id": 5
     }
   ]

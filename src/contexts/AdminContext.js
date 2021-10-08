@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useReducer } from 'react';
-import { COMBO_API, BEVERAGES_API, DESSERTS_API, OTHERGOODS_API, PIZZA_API, SNACKS_API } from '../helpers/const';
+import { COMMNETS, COMBO_API, BEVERAGES_API, DESSERTS_API, OTHERGOODS_API, PIZZA_API, SNACKS_API } from '../helpers/const';
 
 
 
@@ -13,7 +13,7 @@ const INIT_STATE = {
     dessert: null,
     beverage: null,
     othergood: null,
-
+    comment: null,
     pizzaToEdit: null,
     comboToEdit: null,
     snackToEdit: null,
@@ -29,6 +29,8 @@ const reducer = (state = INIT_STATE, action) => {
             return { ...state, pizzaToEdit: action.payload }
         case 'GET_COMBO':
             return { ...state, combo: action.payload }
+        case 'GET_COMMENTS':
+            return { ...state, comment: action.payload }
         case 'GET_COMBO_TO_EDIT':
             return { ...state, comboToEdit: action.payload }
         case 'GET_SNACKS':
@@ -60,6 +62,11 @@ const AdminContextProvider = ({ children }) => {
         getPizza()
     }
 
+    const createComment = async (newItem) => {
+        await axios.post(COMMNETS, newItem)
+        getComm()
+    }
+
     const createCombo = async (newItem) => {
         await axios.post(COMBO_API, { ...newItem, price: +newItem.price })
         getCombo()
@@ -83,6 +90,14 @@ const AdminContextProvider = ({ children }) => {
         getOtherGoods()
     }
 
+
+    const getComm = async () => {
+        const { data } = await axios(COMMNETS)
+        dispatch({
+            type: 'GET_COMMENTS',
+            payload: data
+        })
+    }
     const getPizza = async () => {
         const { data } = await axios(PIZZA_API)
         dispatch({
@@ -90,6 +105,7 @@ const AdminContextProvider = ({ children }) => {
             payload: data
         })
     }
+
     const getCombo = async () => {
         const { data } = await axios(COMBO_API)
         dispatch({
@@ -196,7 +212,6 @@ const AdminContextProvider = ({ children }) => {
         })
     }
 
-
     const saveEditedPizza = async (editedPizza) => {
         await axios.patch(`${PIZZA_API}/${editedPizza.id}`, { ...editedPizza, price: +editedPizza.price })
         getPizza()
@@ -231,7 +246,9 @@ const AdminContextProvider = ({ children }) => {
             createDesserts,
             createBeverages,
             createOtherGoods,
+            createComment,
 
+            getComm,
             getPizza,
             getCombo,
             getSnacks,
@@ -260,6 +277,7 @@ const AdminContextProvider = ({ children }) => {
             saveEditedBeverages,
             saveEditedOtherGoods,
 
+            comment: state.comment,
             pizza: state.pizza,
             combo: state.combo,
             snack: state.snack,

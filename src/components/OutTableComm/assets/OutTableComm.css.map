@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACCA,OAAO,CAAC,uFAAI;ADAZ,AAAA,WAAW,CAAA;EACP,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,OAAO;EACf,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,aAAa;CAC5B;;AACD,AAAA,WAAW,CAAA;EACP,WAAW,EAAE,eAAe;CAC/B",
+    "sources": [
+        "OutTableComm.scss",
+        "../../../variables/Variables.scss"
+    ],
+    "names": [],
+    "file": "OutTableComm.css"
+}

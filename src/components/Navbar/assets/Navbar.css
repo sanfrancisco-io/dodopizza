@@ -120,10 +120,13 @@
 
 .nav-btn button {
   cursor: pointer;
+  width: 33px;
+  height: 35px;
 }
 
 .nav-btn button img {
   width: 30px;
+  border-radius: 5px;
   background-color: #FF6900;
   -webkit-box-shadow: 0 0 10px #a3a3a3;
           box-shadow: 0 0 10px #a3a3a3;

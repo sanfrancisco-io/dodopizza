@@ -10,8 +10,8 @@ import { clientContext } from '../../contexts/ClientContext';
 import '../../variables/Variables.css'
 import BasicModal from '../CardModal/CardModal';
 import { CardActions } from '@material-ui/core';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-
+import CommentModal from '../CommentsModal/CommentModal';
+import BookmarkIcon from '@material-ui/icons/Bookmark';
 const useStyles = makeStyles({
     root: {
         maxWidth: 345,
@@ -76,7 +76,7 @@ const useStyles = makeStyles({
 });
 
 export default function MediaCard({ item }) {
-    const { addAndDeletePizzaInFavorite } = useContext(clientContext)
+    const { addAndDeletePizzaInFavorite, checkPizzaInFavorite } = useContext(clientContext)
     const classes = useStyles();
     return (
         <div className='maincontentcard'>
@@ -99,8 +99,9 @@ export default function MediaCard({ item }) {
                 </CardContent>
                 <div>
                     <CardActions>
-                        <Button onClick={() => addAndDeletePizzaInFavorite(item)} className={classes.actionStyles} size="small"><FavoriteIcon /></Button>
-                        <Button className={classes.actionStyles} size="small">comments</Button>
+                        <Button onClick={() => addAndDeletePizzaInFavorite(item)} className={classes.actionStyles} size="small">
+                            <BookmarkIcon color={checkPizzaInFavorite(item.id) ? 'primary' : 'inherit'} /></Button>
+                        <CommentModal key={item.id} />
                     </CardActions>
                 </div>
             </Card>
