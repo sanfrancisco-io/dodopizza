@@ -1,9 +1,9 @@
 export const API = 'http://localhost:8000/'
 export const PIZZA_API = `https://fake-server-dodoback.herokuapp.com/pizza`
-export const COMBO_API = `${API}combo`
-export const SNACKS_API = `${API}snacks`
-export const DESSERTS_API = `${API}desserts`
-export const BEVERAGES_API = `${API}beverages`
-export const OTHERGOODS_API = `${API}othergoods`
-export const COMMNETS = `${API}comments`
+export const COMBO_API = `https://fake-server-dodoback.herokuapp.com/combo`
+export const SNACKS_API = `https://fake-server-dodoback.herokuapp.com/snacks`
+export const DESSERTS_API = `https://fake-server-dodoback.herokuapp.com/desserts`
+export const BEVERAGES_API = `https://fake-server-dodoback.herokuapp.com/beverages`
+export const OTHERGOODS_API = `https://fake-server-dodoback.herokuapp.com/othergoods`
+export const COMMNETS = `https://fake-server-dodoback.herokuapp.com/comments`
 export const ADMIN = 'aibekn0@gmail.com'
