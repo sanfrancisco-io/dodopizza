@@ -4,11 +4,9 @@ import burgerMenu from '../../images/burgerYellow.svg'
 import { clientContext } from '../../contexts/ClientContext';
 import { Link } from 'react-scroll'
 import LinkNavbar from './LinkNavbar';
-import { IconButton, MenuItem } from '@material-ui/core';
-import { Badge } from 'react-bootstrap';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import { Transition } from 'react-transition-group';
 const Navbar = () => {
-    const { pizzasCountInCart, getPizzas } = useContext(clientContext)
+    const { pizzasCountInCart } = useContext(clientContext)
     const [mobileNavOpen, setMobileNavOpen] = useState(false)
     const [navbar, setNavbar] = useState(false)
 
@@ -19,6 +17,7 @@ const Navbar = () => {
             setNavbar(false)
         }
     }
+    const logoImg = 'https://cdn.dodopizza.info/files/marketing/sources/RU-Dodo-Sign-sRGB.svg'
 
     window.addEventListener('scroll', changeLogo)
     const history = useHistory()
@@ -37,7 +36,15 @@ const Navbar = () => {
                                     offset={-200}
                                     duration={500}
                                 >
-                                    <img className={navbar ? 'nav-stickylogo active' : 'nav-stickylogo'} src='https://cdn.dodopizza.info/files/marketing/sources/RU-Dodo-Sign-sRGB.svg' alt='logo' />
+                                    <Transition
+                                        in={navbar}
+                                        timeout={300}
+                                        mountOnEnter
+                                        unmountOnExit
+                                    >
+                                        {state =>
+                                            <img className={`nav-stickylogo ${state}`} src={logoImg} alt='logo' />}
+                                    </Transition>
                                 </Link>
                                 <Link
                                     className='nav-item'

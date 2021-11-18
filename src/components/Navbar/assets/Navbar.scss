@@ -16,12 +16,8 @@
 }
 .nav-stickylogo{
     width: 37px;
-    display: none;
 }
-.nav-stickylogo.active{
-    display: block;
-    padding: 10px 10px 20px 0;
-}
+
 .navbar-left {
     width: 100%;
     align-items: center;
@@ -119,5 +115,25 @@
         color: $orangeColor;
         cursor: pointer;
         font-size: 42px;
+    }
+}
+.nav-stickylogo.entering{
+animation: logoanimation 300ms linear; 
+}
+.nav-stickylogo.exiting{
+animation: logoanimation 300ms linear alternate-reverse; 
+}
+@keyframes logoanimation {
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateX(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
     }
 }

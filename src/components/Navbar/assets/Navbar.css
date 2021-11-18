@@ -20,12 +20,6 @@
 
 .nav-stickylogo {
   width: 37px;
-  display: none;
-}
-
-.nav-stickylogo.active {
-  display: block;
-  padding: 10px 10px 20px 0;
 }
 
 .navbar-left {
@@ -205,5 +199,50 @@
   color: #FF6900;
   cursor: pointer;
   font-size: 42px;
+}
+
+.nav-stickylogo.entering {
+  -webkit-animation: logoanimation 300ms linear;
+          animation: logoanimation 300ms linear;
+}
+
+.nav-stickylogo.exiting {
+  animation: logoanimation 300ms linear alternate-reverse;
+}
+
+@-webkit-keyframes logoanimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes logoanimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: translateX(-15px);
+            transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 /*# sourceMappingURL=Navbar.css.map */
